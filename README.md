@@ -38,7 +38,7 @@ Cada linea de la matriz representa la distancia desde el punto de origen hasta l
 - Para ir del "pueblo 0" al "pueblo 3", la distancia es **32 kilómetros**.  
 
 De igual manera:  
-- Si quieres ir del "pueblo 2" al "pueblo 0" (posición `[2,0]`), la distancia es **45 kilómetros**, representado en la matriz simétrica.  
+- Si quieres ir del "pueblo 2" al "pueblo 0" (posición `[2,0]`), la distancia es **45 kilómetros**, representado en la matriz simétrica (posición `[0,2]`).  
 
 **Nota:**  
 Esta matriz es **simétrica**, ya que las distancias entre pueblos son las mismas en ambos sentidos.  
