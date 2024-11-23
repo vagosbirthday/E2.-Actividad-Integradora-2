@@ -31,21 +31,3 @@ El programa requiere:
 1. Matriz de distancias entre colonias.  
 2. Matriz de capacidades máximas de transmisión de datos.  
 3. Coordenadas geográficas de las centrales en formato `(x, y)`.  
-
----
-
-## Salida  
-El programa genera:  
-1. Lista de conexiones óptimas de fibra óptica (**MST**).  
-2. Ruta más corta para logística (**TSP**) y su distancia total.  
-3. Valor del flujo máximo entre colonias seleccionadas.  
-4. Visualización del **Diagrama de Voronoi**.  
-
----
-
-## Tecnologías Usadas  
-- **Python**  
-- **NetworkX**: Para trabajar con grafos y algoritmos de flujo.  
-- **SciPy/Matplotlib**: Para el cálculo y visualización del Diagrama de Voronoi.  
-
----
