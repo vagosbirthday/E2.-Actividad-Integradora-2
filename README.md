@@ -78,7 +78,7 @@ Por ejemplo, para \( n = 4 \), se requieren 4 sets de coordenadas, ingresados de
 - [] Encontrar la distribucion optima para conectar colonioas con fibra optica (Algoritmo MST)
 
 ### Punto Numero 2
-- [] Implementacion del algoritmo del comerciante (problema del viajante), Algoritmo TSP
+- [] Implementacion del algoritmo del comerciante (problema del viajante), Algoritmo TSP [Kirill]
 
 ### Punto Numero 3
 - [] Implementacion de algoritmo de flujo maximo de informacion del nodo inicial al nodo final (Flujo Máximo)
@@ -88,7 +88,7 @@ Requerimientos
 Se debe de especificar nodo inicial y nodo final
 
 ### Punto Numero 4
--  [] Determinar que central esta mas cerca de una nueva casa (Geometria computacional)
+-  [] Determinar que central esta mas cerca de una nueva casa (Geometria computacional) [Kirill]
 
 
 ---
