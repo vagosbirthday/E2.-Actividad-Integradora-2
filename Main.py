@@ -1,6 +1,16 @@
 import numpy as np
 from itertools import permutations
 
+
+from TSP import TSP
+
+"""
+
+Escirto por Daniel Aguilar
+
+
+"""
+
 # --------------------------------------------------------
 # Funciones para Recolección de Datos de Entrada
 # --------------------------------------------------------
@@ -33,10 +43,15 @@ def obtener_entrada_matriz(mensaje, tamaño):
                 if len(fila) != tamaño:
                     print(f"La fila debe tener {tamaño} elementos.")
                     continue
+                
+                # Se agrega un 0 al inicio de la fila para ajustar el índice a como lo pide la implementacion del algoritmo TSP
+                fila.insert(0, 0)
                 matriz.append(fila)
                 break
             except ValueError:
                 print("Entrada inválida. Asegúrese de ingresar números enteros.")
+    # Se inserta una fila de ceros al inicio de la matriz para ajustar el índice a como lo pide la implementacion del algoritmo TSP
+    matriz.insert(0, [0] * (tamaño + 1))
     return matriz
 
 def obtener_entrada_coordenadas(tamaño):
@@ -73,9 +88,22 @@ def main():
     # Coordenadas de las centrales
     coordenadas_centrales = obtener_entrada_coordenadas(num_colonias)
     
+    # Parte 1:
+    
+    # Parte 2: Problema del Agente Viajero
+    
+    TSP_solver = TSP(num_colonias, matriz_distancias)
+    
+    print("\nResolviendo el problema del Agente Viajero...")
+    distancia_minima = TSP_solver.solve()
+    
+    print(f"La distancia mínima para recorrer todas las colonias es: {distancia_minima}")
+    
+    
     # Mostrar los datos recolectados
     print("\nDatos recolectados:")
     print(f"Número de colonias: {num_colonias}")
+    print("\n(NOTA: Matriz ajustada para el algoritmo TSP)")
     
     print("\nMatriz de distancias entre colonias:")
     for fila in matriz_distancias:
@@ -86,4 +114,10 @@ def main():
         print(f"Central {i+1}: {coord}")
 
 # Ejecutamos el programa
-main()
+
+
+# Esta condición se cumple si el script se ejecuta directamente, no si se importa como módulo.
+# Pero de todos modos nos permite importar los metodos de este script en otro script
+
+if __name__ == "__main__": 
+    main()
