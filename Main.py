@@ -1,7 +1,6 @@
 import numpy as np
 from itertools import permutations
-
-
+from flujo_maximo import FlujoMaximo
 from TSP import TSP
 
 """
@@ -79,14 +78,18 @@ def main():
     1. Lectura de datos con validación.
     2. Mostrar los datos ingresados.
     """
-    # Leer entrada
+   # Leer entrada
     num_colonias = obtener_entrada_numero("Número de colonias (ej. 4): ", rango=(1, 100))
     
     # Matriz de distancias entre colonias
     matriz_distancias = obtener_entrada_matriz("Ingrese las distancias entre colonias (grafo ponderado): ", num_colonias)
     
+    # Matriz de capacidades
+    matriz_capacidades = obtener_entrada_matriz("Ingrese las capacidades de flujo máximo entre colonias: ", num_colonias)
+    
     # Coordenadas de las centrales
     coordenadas_centrales = obtener_entrada_coordenadas(num_colonias)
+
     
     # Parte 1:
     
@@ -98,6 +101,17 @@ def main():
     distancia_minima = TSP_solver.solve()
     
     print(f"La distancia mínima para recorrer todas las colonias es: {distancia_minima}")
+
+    # Parte 3: Flujo máximo entre nodos
+    flujo_solver = FlujoMaximo(num_colonias, matriz_capacidades)
+
+    nodo_fuente = obtener_entrada_numero("Ingrese el nodo fuente (0-indexado): ", rango=(0, num_colonias - 1))
+
+    nodo_sumidero = obtener_entrada_numero("Ingrese el nodo sumidero (0-indexado): ", rango=(0, num_colonias - 1))
+
+    flujo_maximo = flujo_solver.calcular_flujo_maximo(nodo_fuente, nodo_sumidero)
+
+    print(f"El flujo máximo entre el nodo {nodo_fuente} y el nodo {nodo_sumidero} es: {flujo_maximo}")
     
     
     # Mostrar los datos recolectados
