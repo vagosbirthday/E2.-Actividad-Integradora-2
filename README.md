@@ -92,8 +92,6 @@ Salida del algoritmo de el algoritmo TSP
 ### **Tercer salida**
 
 lista de poligonos
-- [] Preguntar a betty con que se refiere a esto
-
 
 
 Caso de prueba
