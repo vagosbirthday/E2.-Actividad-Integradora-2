@@ -59,37 +59,23 @@ Ejemplo:
 Entonces sabemos que para llegar del "pueblo 0" al "pueblo 1", la distancia es 16 kilometros y la cantidad de informacion que pueden intercambiar es de 48
 
 #### **Cuarta entrada**  
-Se solicitan pares de coordenadas \( (X, Y) \) para cada pueblo especificado en la primera entrada.  
+Se solicitan pares de coordenadas \( (X, Y) \) para cada central con la cantidad especificada en la primera entrada.  
 
 Por ejemplo, para \( n = 4 \), se requieren 4 sets de coordenadas, ingresados de esta manera:  
 
-    200,500
-    300,100
-    450,150
-    520,480
+    200 500
+    300 100
+    450 150
+    520 480
 
----
+#### **Cuarta entrada**  
+Se solicitan pares de coordenadas \( (X, Y) \) de una nueva central que se va a instalar
 
+Por ejemplo
 
+    250 130
 
-## TODO 
-
-### Punto Numero 1
-- [] Encontrar la distribucion optima para conectar colonioas con fibra optica (Algoritmo MST)
-
-### Punto Numero 2
-- [] Implementacion del algoritmo del comerciante (problema del viajante), Algoritmo TSP [Kirill]
-
-### Punto Numero 3
-- [] Implementacion de algoritmo de flujo maximo de informacion del nodo inicial al nodo final (Flujo Máximo)
-- [] Preguntar a betty como implementar este algoritmo, si es necesario que todas las colonias se puedan interconectar y si es necesario especificar nodo de inicio y nodo final.
- 
-Requerimientos
-Se debe de especificar nodo inicial y nodo final
-
-### Punto Numero 4
--  [] Determinar que central esta mas cerca de una nueva casa (Geometria computacional) [Kirill]
-
+Para poder obtener la central mas cercana a la que vamos a conectar esta nueva central 
 
 ---
 
@@ -117,7 +103,12 @@ Caso de prueba
 16  0 18 21
 45 18  0  7
 32 21  7  0
-200,500
-300,100
-450,150
-520,480
+0 48  12  18
+52  0 42 32
+18 46  0 56
+24 36 52  0
+200 500
+300 100
+450 150
+520 480
+250 130
