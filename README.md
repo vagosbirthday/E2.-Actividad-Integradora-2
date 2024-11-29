@@ -68,7 +68,7 @@ Por ejemplo, para \( n = 4 \), se requieren 4 sets de coordenadas, ingresados de
     450 150
     520 480
 
-#### **Cuarta entrada**  
+#### **Quinta entrada**  
 Se solicitan pares de coordenadas \( (X, Y) \) de una nueva central que se va a instalar
 
 Por ejemplo
